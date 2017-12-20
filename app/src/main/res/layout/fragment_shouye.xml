@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:background="#FC4F02"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:id="@+id/zxing"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_normal_code"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫啊扫"
+                />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_weight="8"
+            android:layout_width="261dp"
+            android:layout_height="50dp"
+            android:hint="请输入要搜索的内容"
+            android:gravity="center"
+            android:background="#FC4F02"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#FFD85115"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/duanxin"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_normal2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/one_bn"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                >
+            </com.youth.banner.Banner>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/one_sdv"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                fresco:placeholderImage="@mipmap/ic_launcher"
+                fresco:roundAsCircle="false"
+                fresco:roundBottomLeft="false"
+                fresco:roundBottomRight="true" />
+            <ViewFlipper
+                android:id="@+id/one_vf"
+                android:layout_width="match_parent"
+                android:background="#fff"
+                android:autoStart="true"
+                android:flipInterval="3000"
+                android:layout_marginLeft="5dp"
+                android:inAnimation="@anim/inflipper"
+                android:outAnimation="@anim/outflipper"
+                android:layout_height="60dp">
+            </ViewFlipper>
+            <android.support.v4.view.ViewPager
+                android:layout_gravity="center"
+                android:id="@+id/one_vp"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/one_xsqg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#fffffb"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="秒杀倒计时:"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/one_tv_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#000"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="02"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=":"
+                    android:textColor="#fffffb"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/one_tv_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#000"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="15"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=":"
+                    android:textColor="#fffffb"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/one_tv_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#000"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="36"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/one_ms_recy"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="#fffffb">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#fffffb"
+                android:text="为你推荐"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ff0"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/one_tj_recy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fffffb">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
